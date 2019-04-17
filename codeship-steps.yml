@@ -1,6 +1,5 @@
 - name: ci
   type: serial
-  service: SetEnv
   steps:
   - name: Download Tunnel
     command: wget https://s3.amazonaws.com/lambda-tunnel/LT_Linux.zip
