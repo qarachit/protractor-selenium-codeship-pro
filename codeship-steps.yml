@@ -4,7 +4,7 @@
   steps:
   - name: Download Tunnel
     command: wget https://s3.amazonaws.com/lambda-tunnel/LT_Linux.zip
-             sudo apt-get install unzip
+             apt-get install unzip
              unzip LT_Linux.zip --quiet
              ./LT -user robovipin -key bX3VZpiN4Tp7cLD7MTfoXqqOZK3q7Xov7UcSCwGQkzf1MEB6bI
              sleep 40
