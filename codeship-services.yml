@@ -1,4 +1,4 @@
-project_name:
+SetEnv:
   build:
     image: qarachit/protractor-selenium-codeship-pro
     dockerfile: Dockerfile
