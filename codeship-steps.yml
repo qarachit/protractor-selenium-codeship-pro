@@ -1,18 +1,14 @@
-- type: serial
+- name: ci
+  type: serial
   steps:
-    - name: configure-tunnel
-      services: SetEnv
-      command: bash -c
-        #Downloading tunnel binary
-        wget https://s3.amazonaws.com/lambda-tunnel/LT_Linux.zip
-        #Extracting tunnel binary
-        sudo apt-get install unzip
-        unzip LT_Linux.zip
-        #Executing tunnel binary
-        ./LT -user robovipin -key bX3VZpiN4Tp7cLD7MTfoXqqOZK3q7Xov7UcSCwGQkzf1MEB6bI
-        sleep 40
-    - name: Run-Tests
-      services: SetEnv
-      command: bash -c
-        cd /home/rof/src/github.com/qarachit/protractor-selenium-codeship-pro/conf
-        protractor local.conf.js
+  - service: SetEnv
+    command: bash -c
+      wget https://s3.amazonaws.com/lambda-tunnel/LT_Linux.zip
+      sudo apt-get install unzip
+      unzip LT_Linux.zip
+      ./LT -user robovipin -key bX3VZpiN4Tp7cLD7MTfoXqqOZK3q7Xov7UcSCwGQkzf1MEB6bI
+      sleep 40
+  - service: SetEnv
+    command: bash -c
+      cd /home/rof/src/github.com/qarachit/protractor-selenium-codeship-pro/conf
+      protractor local.conf.js
