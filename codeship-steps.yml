@@ -5,7 +5,7 @@
   - name: Download Tunnel
     command: wget https://s3.amazonaws.com/lambda-tunnel/LT_Linux.zip
   - name: unzip tunnel
-    command: sudo apt-get install unzip
+    command: apt-get install unzip
   - name: unzip linux
     command: unzip LT_Linux.zip
   - name: LT
