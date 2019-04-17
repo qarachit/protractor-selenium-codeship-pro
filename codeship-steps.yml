@@ -1,9 +1,7 @@
-- name: run-tests
-  type: serial
-  services: SetEnv
- 
+- type: serial
   steps:
     - name: configure-tunnel
+      services: SetEnv
       command: bash -c
         #Downloading tunnel binary
         wget https://s3.amazonaws.com/lambda-tunnel/LT_Linux.zip
@@ -14,6 +12,7 @@
         ./LT -user robovipin -key bX3VZpiN4Tp7cLD7MTfoXqqOZK3q7Xov7UcSCwGQkzf1MEB6bI
         sleep 40
     - name: Run-Tests
+      services: SetEnv
       command: bash -c
         cd /home/rof/src/github.com/qarachit/protractor-selenium-codeship-pro/conf
         protractor local.conf.js
