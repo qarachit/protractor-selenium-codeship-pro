@@ -1,0 +1,8 @@
+# Run the tests in each environment
+- name: run-tests
+  type: serial
+  
+  steps:
+   - command:
+   - command: deployment/run-ci-tests.sh
+name: tests
