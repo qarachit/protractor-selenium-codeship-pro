@@ -1,7 +1,7 @@
 - name: run-tests
   type: serial
-  services:
-   - SetEnv
+  services: SetEnv
+ 
   steps:
     - name: configure-tunnel
       command: bash -c
@@ -13,7 +13,7 @@
         #Executing tunnel binary
         ./LT -user robovipin -key bX3VZpiN4Tp7cLD7MTfoXqqOZK3q7Xov7UcSCwGQkzf1MEB6bI
         sleep 40
-    - name: Run Tests
+    - name: Run-Tests
       command: bash -c
-        cd /home/rof/src/github.com/qarachit/protractor-selenium-codeship-sample/conf
+        cd /home/rof/src/github.com/qarachit/protractor-selenium-codeship-pro/conf
         protractor local.conf.js
