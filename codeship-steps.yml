@@ -1,9 +1,10 @@
 - name: ci
   type: serial
-  steps:
   service: SetEnv
+  steps:
   - name: Download Tunnel
     command: wget https://s3.amazonaws.com/lambda-tunnel/LT_Linux.zip
+             apt-get install unzip
   - name: unzip tunnel
     command: apt-get install unzip
   - name: unzip linux
