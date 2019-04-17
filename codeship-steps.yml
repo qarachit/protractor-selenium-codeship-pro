@@ -2,6 +2,6 @@
   type: serial
   service: SetEnv
   steps:
-  - name: run tests
-    command: protractor local.conf.js
+  - name: get path
+    command: ls -al
       
