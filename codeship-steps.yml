@@ -2,8 +2,6 @@
   type: serial
   service: SetEnv
   steps:
-  - name: go to dir
-    command: cd /home/rof/src/github.com/qarachit/protractor-selenium-codeship-pro/conf
   - name: run tests
     command: protractor local.conf.js
       
