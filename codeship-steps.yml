@@ -1,12 +1,13 @@
 - name: ci
   type: serial
+  service: SetEnv
   steps:
   - name: Download Tunnel
     command: wget https://s3.amazonaws.com/lambda-tunnel/LT_Linux.zip
   - name: unzip tunnel
     command: apt-get install unzip
   - name: unzip linux
-    command: unzip LT_Linux.zip
+    command: unzip LT_Linux.zip --quiet
   - name: LT
     command: ./LT -user robovipin -key bX3VZpiN4Tp7cLD7MTfoXqqOZK3q7Xov7UcSCwGQkzf1MEB6bI
   - name: sleep
